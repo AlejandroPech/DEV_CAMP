@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>{{ environment }}Boletaje CLICS</title>    
+        <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+
+        <link rel="icon" type="image/png" href="https://pagosreferencia.yucatan.gob.mx/favicon.ico">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/bootstrap.css">      
+        <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/jquery.dataTables.min.css" >
+        <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/responsive.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/fontawesome/css/font-awesome.css">
+        		
+		<link rel="stylesheet" href="{{ base_url() }}/assets/codebase/css/suite.css?v=7.2.1">
+        <link rel="stylesheet" href="{{ base_url() }}/assets/codebase/css/bootstrap.css">		
+		<link rel="stylesheet" href="{{ base_url() }}/assets/common/index.css?v=7.2.1">		
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.4.95/css/materialdesignicons.css?v=6.4.4" media="all" rel="stylesheet" type="text/css">
+		
+        <style type="text/css">
+
+            .layout-header {
+                background: #636165;
+                color: #fff;
+                font-size: 24px;
+                font-weight: 800;
+            }   
+
+            .layout-footer {
+                background: #636165;
+                color: #fff;
+                font-size: 24px;
+                font-weight: 800;
+	        }
+
+            table.dataTable tbody tr:hover{
+                background-color: rgb(49, 187, 221) !important;
+            }
+            
+            .dhx_sidebar-button--active, .dhx_sidebar-button:active {
+                background-color: rgb(0 0 0 / 26%);
+                transition: background-color .2s ease-out;
+            }
+
+            .fullscreen {
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                overflow: auto;
+                /* background: lime; */
+            }
+
+            /* div.cls-btn-export div.dt-buttons */
+            div.cls-btn-export{
+                /* padding-left: 15px; */
+                visibility: hidden !important;
+            }
+        </style>
+	</head>
+
+    <body>
+        <input type="hidden" value="{{ urlrecibo }}" id="url-recibo" />
+        <div id="app">
+            <div id="main" class="fullscreen"> </div>
+        </div>        
+        <!-- inicio: modal avisos  -->   
+        <div class="modal fade" id="divmodal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center modal-titulo">Aviso</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          					<span aria-hidden="true">&times;</span>
+        				</button>                                         
+                    </div>
+                    <div class="modal-body"></div>                    
+                </div>
+            </div>
+        </div><!-- fin:[div#ModalAlertas] -->       
+        <!-- fin: inicio: modal avisos -->
+
+        <script type="text/javascript" src="{{ base_url() }}/assets/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="{{ base_url() }}/assets/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="{{ base_url() }}/assets/js/dataTables.responsive.min.js"></script>
+        <script type="text/javascript" src="{{ base_url() }}/assets/js/sweetalert2.js"></script>    
+        <script type="text/javascript" src="{{ base_url() }}/assets/codebase/js/suite.js?v=7.2.1"></script>                
+        <script type="text/javascript" src="{{ base_url() }}/assets/codebase/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ base_url() }}/js/jquery.blockUI.js"></script>
+    
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.1.0/js/dataTables.buttons.min.js"></script>        
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>        
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.html5.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables-buttons/2.2.0/js/buttons.print.min.js"></script>
+
+        <script type="text/javascript" src="{{ base_url() }}/components/main-app.js"></script>
+        
+	</body>
+</html>
